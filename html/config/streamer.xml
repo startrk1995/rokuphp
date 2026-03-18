@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <app>
+       <name_>ffmpeg</name_>
+       <name>ffmpeg -loglevel error</name>
+    </app>
+    <audio>
+       <disable>-f lavfi -i anullsrc</disable>
+    </audio>
+    <hls>
+        <infile_options>-thread_queue_size 512 -rtsp_transport +udp+tcp -rtsp_flags prefer_tcp -i</infile_options>
+        <outfile_options>-vcodec copy -codec:a aac -f hls -hls_flags delete_segments</outfile_options>
+        <outfile_dir>/dev/shm/</outfile_dir>
+    </hls>
+    <live>
+        <platform>
+            <name>YouTube</name>
+            <infile_options>-thread_queue_size 512 -rtsp_transport +udp+tcp -rtsp_flags prefer_tcp -i</infile_options>
+            <outfile_options>-vcodec copy -codec:a aac  -f flv -r 25 -g 50 rtmp://a.rtmp.youtube.com/live2/</outfile_options>
+	</platform>
+        <platform>
+            <name>Twitch</name>
+            <infile_options>-thread_queue_size 512 -rtsp_transport +udp+tcp -rtsp_flags prefer_tcp -i</infile_options>
+            <outfile_options>-vcodec copy -codec:a aac  -f flv -r 25 -g 50 rtmp://live.twitch.tv/app/</outfile_options>
+	</platform>
+    </live>
+</xml>
