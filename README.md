@@ -1,8 +1,8 @@
-# RokuPHP — ARM64 / PHP 8 Upgrade
+# RokuPHP — PHP 8 Fork (ARM64 + x86-64)
 
 Enable H.264/RTSP to HLS streaming for **IP Camera Viewer Pro** on Roku.
 This is a modernised fork of [e1ioan/rokuphp](https://github.com/e1ioan/rokuphp)
-upgraded to run on **64-bit Raspberry Pi OS** (aarch64) with **PHP 8.x**.
+upgraded to run on **64-bit Linux** (ARM64 / x86-64) with **PHP 8.x**.
 
 ---
 
@@ -15,7 +15,7 @@ upgraded to run on **64-bit Raspberry Pi OS** (aarch64) with **PHP 8.x**.
 | Any aarch64 SBC | ARM64 / aarch64 | ✅ |
 | Raspberry Pi 3 | ARMv7 (32-bit) | ❌ Use [original](https://github.com/e1Ioan/rokuphp) |
 | Orange Pi Zero | ARMv7 (32-bit) | ❌ Use [original](https://github.com/e1Ioan/rokuphp) |
-| x86 / x86-64 | amd64 | ❌ Not tested |
+| x86-64 PC / VM | x86_64 / amd64 | ✅ Confirmed (Ubuntu 24.04) |
 
 | OS | Version | Supported |
 |----|---------|-----------|
